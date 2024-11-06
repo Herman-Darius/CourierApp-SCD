@@ -1,6 +1,7 @@
 package com.example.SCDProiectv2.Services;
 
 import com.example.SCDProiectv2.Models.AuthenticationResponse;
+import com.example.SCDProiectv2.Models.Role;
 import com.example.SCDProiectv2.Models.User;
 import com.example.SCDProiectv2.Repositories.UserRepository;
 import lombok.AllArgsConstructor;
@@ -25,8 +26,7 @@ public class AuthenticationService {
         user.setPassword(passwordEncoder.encode(request.getPassword()));
         user.setFirstName(request.getFirstName());
         user.setLastName(request.getLastName());
-
-        user.setRole(user.getRole());
+        user.setRole(Role.USER);
 
         user = userRepository.save(user);
 
@@ -34,6 +34,23 @@ public class AuthenticationService {
 
         return new AuthenticationResponse(token);
     }
+
+    public AuthenticationResponse registerDemo(User request){
+        User user = new User();
+        user.setUsername(request.getUsername());
+        user.setPassword(passwordEncoder.encode(request.getPassword()));
+        user.setFirstName("Herman");
+        user.setLastName("Darius");
+        user.setEmail(request.getEmail());
+        user.setRole(Role.ADMIN);
+
+        user = userRepository.save(user);
+
+        String token = jwtService.generateToken(user);
+
+        return new AuthenticationResponse(token);
+    }
+
 
     public AuthenticationResponse authenticate(User request){
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword()));

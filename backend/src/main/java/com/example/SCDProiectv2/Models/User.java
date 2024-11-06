@@ -27,6 +27,9 @@ public class User implements UserDetails, Serializable {
     @Column(name = "last_name")
     private String lastName;
 
+    @Column(name = "email")
+    private String email;
+
     @Column(name = "username")
     private String username;
 
@@ -35,7 +38,7 @@ public class User implements UserDetails, Serializable {
 
     @Column(name = "role")
     @Enumerated(value = EnumType.STRING)
-    private Role role;
+    private Role role = Role.USER;
 
 
     @Override
