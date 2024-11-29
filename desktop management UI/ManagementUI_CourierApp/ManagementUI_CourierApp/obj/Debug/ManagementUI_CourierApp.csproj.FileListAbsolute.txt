@@ -41,3 +41,9 @@ C:\Users\Herman Darius-Razvan\source\repos\ManagementUI_CourierApp\ManagementUI_
 C:\Users\Herman Darius-Razvan\source\repos\ManagementUI_CourierApp\ManagementUI_CourierApp\obj\Debug\Manageme.77D2AA86.Up2Date
 C:\Users\Herman Darius-Razvan\source\repos\ManagementUI_CourierApp\ManagementUI_CourierApp\obj\Debug\ManagementUI_CourierApp.exe
 C:\Users\Herman Darius-Razvan\source\repos\ManagementUI_CourierApp\ManagementUI_CourierApp\obj\Debug\ManagementUI_CourierApp.pdb
+C:\Users\Herman Darius-Razvan\source\repos\ManagementUI_CourierApp\ManagementUI_CourierApp\obj\Debug\ManagementUI_CourierApp.MainForm.resources
+C:\Users\Herman Darius-Razvan\source\repos\ManagementUI_CourierApp\ManagementUI_CourierApp\obj\Debug\ManagementUI_CourierApp.AdminForm.resources
+C:\Users\Herman Darius-Razvan\source\repos\ManagementUI_CourierApp\ManagementUI_CourierApp\bin\Debug\System.IO.Pipelines.dll
+C:\Users\Herman Darius-Razvan\source\repos\ManagementUI_CourierApp\ManagementUI_CourierApp\bin\Debug\System.Net.Http.Json.dll
+C:\Users\Herman Darius-Razvan\source\repos\ManagementUI_CourierApp\ManagementUI_CourierApp\bin\Debug\System.IO.Pipelines.xml
+C:\Users\Herman Darius-Razvan\source\repos\ManagementUI_CourierApp\ManagementUI_CourierApp\bin\Debug\System.Net.Http.Json.xml

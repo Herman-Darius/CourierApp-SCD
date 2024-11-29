@@ -1,0 +1,13 @@
+<div class="product-list">
+    <h2>Available Products</h2>
+  
+    <div *ngFor="let product of products" class="product-item">
+      <input 
+        type="checkbox" 
+        (change)="toggleProductSelection(product)" 
+        [checked]="selectedProducts.includes(product)" 
+      />
+      <span>{{ product.name }} - ${{ product.price }}</span>
+    </div>
+  </div>
+  

@@ -1,0 +1,17 @@
+.product-list {
+    margin: 20px;
+  }
+  
+  .product-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-item span {
+    margin-left: 10px;
+  }
+  
+  button {
+    margin-top: 20px;
+  }
+  

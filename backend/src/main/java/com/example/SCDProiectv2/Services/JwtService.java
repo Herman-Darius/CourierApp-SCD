@@ -1,6 +1,6 @@
 package com.example.SCDProiectv2.Services;
 
-import com.example.SCDProiectv2.Models.User;
+import com.example.SCDProiectv2.Models.Courier;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
@@ -27,11 +27,12 @@ public class JwtService {
 
     public Boolean isValid(String token, UserDetails user) {
         String username = extractUsername(token);
-        return username.equals(user.getUsername()) && isTokenExpired(token);
+        return username.equals(user.getUsername()) && !isTokenExpired(token);
     }
 
     private boolean isTokenExpired(String token) {
-        return extractExpiration(token).before(new Date());
+        Date expiration = extractExpiration(token);
+        return expiration != null && expiration.before(new Date());
     }
 
     private Date extractExpiration(String token) {
@@ -45,13 +46,19 @@ public class JwtService {
                 .build()
                 .parseSignedClaims(token)
                 .getPayload();
+
     };
 
-    public String generateToken(User user) {
+    public String generateToken(Courier user) {
+        Date now = new Date();
+        Date expiration = new Date(now.getTime() + 1000 * 60 * 60);
+
         String token = Jwts
                 .builder()
                 .subject(user.getUsername())
+                .claim("roles", user.getRole())
                 .issuedAt(new Date(System.currentTimeMillis()+ 24*60*60*1000))
+                .setExpiration(expiration)
                 .signWith(getSigningKey())
                 .compact();
         return token;

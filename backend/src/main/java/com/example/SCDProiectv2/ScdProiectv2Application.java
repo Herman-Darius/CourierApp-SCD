@@ -1,5 +1,6 @@
 package com.example.SCDProiectv2;
 
+import com.example.SCDProiectv2.Services.AdminUserInitializer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;

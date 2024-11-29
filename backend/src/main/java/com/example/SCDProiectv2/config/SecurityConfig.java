@@ -1,6 +1,7 @@
 package com.example.SCDProiectv2.config;
 
 import com.example.SCDProiectv2.Filter.JwtAuthenticationFilter;
+import com.example.SCDProiectv2.Models.Role;
 import com.example.SCDProiectv2.Services.UserDetailsServiceImp;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -31,7 +32,8 @@ public class SecurityConfig {
                 .authorizeHttpRequests(
                         req -> req.requestMatchers("/login/**","register/**")
                         .permitAll()
-                        .requestMatchers("admin_only").hasRole("ADMIN")
+                        .requestMatchers("/package/**").hasRole("ADMIN")
+                        .requestMatchers("/courier/**").hasRole("ADMIN")
                         .anyRequest()
                         .authenticated()
                 ).userDetailsService(userDetailsServiceImp)
