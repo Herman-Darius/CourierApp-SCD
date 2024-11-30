@@ -17,7 +17,7 @@ public class DeliveryPackage {
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name = "courier_id", nullable = false)
+    @JoinColumn(name = "courier_id")
     private Courier courier;
 
     @Column(name = "created_on", nullable = false, updatable = false)

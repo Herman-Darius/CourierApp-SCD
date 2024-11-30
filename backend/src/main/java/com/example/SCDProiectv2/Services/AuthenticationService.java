@@ -25,7 +25,7 @@ public class AuthenticationService {
         user.setFirstName(request.getFirstName());
         user.setLastName(request.getLastName());
         user.setEmail(request.getEmail());
-        user.setRole(Role.ADMIN);
+        user.setRole(Role.USER);
         user = courierRepository.save(user);
 
         String token = jwtService.generateToken(user);

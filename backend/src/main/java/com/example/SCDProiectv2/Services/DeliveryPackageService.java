@@ -17,6 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Date;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -90,7 +91,7 @@ public class DeliveryPackageService {
         return packageRepository.findByCourierId(courierId);
     }
 
-    public List<DeliveryPackage> findPackagesByStatus(String status) {
+    public List<DeliveryPackage> findPackagesByStatus(PackageStatus status) {
         return packageRepository.findByStatus(status);
     }
     //De aici fac iar ca m-am enervat pe mine ala din trecut de a facut prostii
@@ -98,8 +99,8 @@ public class DeliveryPackageService {
     @Transactional
     public ResponseEntity<?> createDeliveryPackage(PackageCreateRequestDTO deliveryPackageDTO) {
         try{
-            Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-            String managerName = auth.getName();
+            //Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+            //String managerName = auth.getName();
             DeliveryPackage myPackage = new DeliveryPackage();
             myPackage.setDeliveryAddress(deliveryPackageDTO.getDeliveryAddress());
             myPackage.setEmail(deliveryPackageDTO.getEmail());
@@ -109,7 +110,7 @@ public class DeliveryPackageService {
             packageRepository.save(myPackage);
             return ResponseEntity.status(HttpStatus.CREATED).body("Package created successfully");
         } catch (Exception e){
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("ERROR FROM BACKEND ---------------->" + e.getMessage());
         }
     }
 
@@ -123,22 +124,80 @@ public class DeliveryPackageService {
         }
     }
 
-    public ResponseEntity<?> findCurrentCourierDeliveries(){
+    public List<DeliveryPackage> findCurrentCourierDeliveries(){
         try{
             Authentication auth = SecurityContextHolder.getContext().getAuthentication();
             String username = auth.getName();
             Optional<Courier> courier = courierRepository.findByUsername(username);
+            //Sa nu uiti ca aici trebuie sa scoti alea DELIVERED si sa le afisezi altundeva, ca in C# apar si PENDING si DELIVERED <3
             if(courier.isPresent()) {
                 List<DeliveryPackage> deliveries = packageRepository.findByCourierId(courier.get().getId());
-                return ResponseEntity.status(HttpStatus.OK).body(deliveries);
+                System.out.println("---------------------------------------------------------------" + deliveries.toString());
+                return deliveries;
             }
             else
-                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Courier not found");
+                return new ArrayList<>();
 
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+            return new ArrayList<>();
+        }
+    }
+
+    /*public ResponseEntity<?> takeDelivery(String address) {
+
+        try{
+            Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+            String username = auth.getName();
+            System.out.println("Asta e contu care vrea sa ia comanda: "+ username);
+            Optional<Courier> courier = courierRepository.findByUsername(username);
+            Optional<DeliveryPackage> myPackage = packageRepository.findByDeliveryAddress(address);
+            if(courier.isPresent()) {
+                if(myPackage.isPresent()) {
+                    myPackage.get().setStatus(PackageStatus.PENDING);
+                    myPackage.get().setCourier(courier.get());
+                    packageRepository.save(myPackage.get());
+                    return ResponseEntity.status(HttpStatus.OK).body("Package taken successfully");
+                } else{
+                    return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Package not found");
+                }
+
+            } else {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Courier not found");
+            }
+        } catch (Exception e){
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+        }
+    }*/
+
+    public ResponseEntity<?> changeDeliveryStatus(String address, PackageStatus status) {
+
+        try{
+            Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+            String username = auth.getName();
+
+            Optional<Courier> courier = courierRepository.findByUsername(username);
+            Optional<DeliveryPackage> myPackage = packageRepository.findByDeliveryAddress(address);
+            if(courier.isPresent()) {
+                if(myPackage.isPresent()) {
+                    myPackage.get().setStatus(status);
+                    myPackage.get().setCourier(courier.get());
+                    packageRepository.save(myPackage.get());
+                    System.out.println(username + "a schimbat statusul pachetului in " +status);
+                    return ResponseEntity.status(HttpStatus.OK).body("Package taken successfully");
+                } else{
+                    return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Package not found");
+                }
+
+            } else {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Courier not found");
+            }
         } catch (Exception e){
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
         }
     }
+
+
 
 
 }
