@@ -1,6 +1,7 @@
 package com.example.SCDProiectv2.Controllers;
 
 import com.example.SCDProiectv2.DTOs.CourierDTO;
+import com.example.SCDProiectv2.DTOs.CourierSearchDTO;
 import com.example.SCDProiectv2.Models.Courier;
 import com.example.SCDProiectv2.Repositories.CourierRepository;
 import com.example.SCDProiectv2.Services.CourierService;
@@ -37,7 +38,7 @@ public class CourierController {
     }
     @GetMapping("/courier/{adminId}/couriers")
     public ResponseEntity<?> getCouriersManagedByAdmin(@PathVariable Integer adminId) {
-        Set<CourierDTO> couriers = courierService.getCouriersManagedByAdmin(adminId);
+        Set<CourierSearchDTO> couriers = courierService.getCouriersManagedByAdmin(adminId);
         return ResponseEntity.ok(couriers);
     }
     @GetMapping("/courier/get-all")
@@ -45,4 +46,23 @@ public class CourierController {
         return ResponseEntity.ok(courierService.getAllCouriers());
     }
 
+    @PostMapping("/courier/update")
+    public ResponseEntity<?> updateCourier(@RequestBody CourierDTO courierDTO) {
+        return ResponseEntity.ok(courierService.updateCourier(courierDTO));
+    }
+
+    @DeleteMapping("/courier/delete/{username}")
+    public ResponseEntity<?> deleteCourier(@PathVariable String username) {
+        return ResponseEntity.ok(courierService.deleteCourier(username));
+    }
+
+    @PostMapping("/courier/{username}/promote")
+    public ResponseEntity<?> promoteCourier(@PathVariable String username) {
+        return ResponseEntity.ok(courierService.promoteToManager(username));
+    }
+
+    @PostMapping("/courier/{username}/demote")
+    public ResponseEntity<?> demoteCourier(@PathVariable String username) {
+        return ResponseEntity.ok(courierService.demodeFromManager(username));
+    }
 }

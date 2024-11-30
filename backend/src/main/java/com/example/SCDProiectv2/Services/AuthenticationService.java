@@ -33,23 +33,6 @@ public class AuthenticationService {
         return new AuthenticationResponse(token);
     }
 
-    public AuthenticationResponse registerDemo(Courier request){
-        Courier user = new Courier();
-        user.setUsername(request.getUsername());
-        user.setPassword(passwordEncoder.encode(request.getPassword()));
-        user.setFirstName("Herman");
-        user.setLastName("Darius");
-        user.setEmail(request.getEmail());
-        user.setRole(Role.ADMIN);
-
-        user = courierRepository.save(user);
-
-        String token = jwtService.generateToken(user);
-
-        return new AuthenticationResponse(token);
-    }
-
-
     public AuthenticationResponse authenticate(Courier request){
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword()));
         Courier user = courierRepository.findByUsername(request.getUsername()).orElseThrow();

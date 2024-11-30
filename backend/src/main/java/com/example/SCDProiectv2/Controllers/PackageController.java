@@ -23,18 +23,7 @@ public class PackageController {
     //@PreAuthorize("hasRole('ADMIN')")
     @PostMapping("create")
     public ResponseEntity<?> create(@RequestBody PackageCreateRequestDTO packageDTO) {
-        try {
-            DeliveryPackage newPackage = new DeliveryPackage();
-            newPackage.setDeliveryAddress(packageDTO.getDeliveryAddress());
-            newPackage.setEmail(packageDTO.getEmail());
-            newPackage.setPhoneNumber(packageDTO.getPhoneNumber());
-            System.out.println("Saving package: " + newPackage);
-            DeliveryPackage createdPackage = packageService.create(newPackage);
-            return ResponseEntity.ok(createdPackage);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An error occurred while creating the package.");
-        }
+        return ResponseEntity.ok(packageService.createDeliveryPackage(packageDTO));
     }
 
     @GetMapping("get-all")

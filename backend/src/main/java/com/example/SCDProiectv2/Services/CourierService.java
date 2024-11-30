@@ -1,15 +1,22 @@
 package com.example.SCDProiectv2.Services;
 
 import com.example.SCDProiectv2.DTOs.CourierDTO;
+import com.example.SCDProiectv2.DTOs.CourierSearchDTO;
 import com.example.SCDProiectv2.Models.Courier;
+import com.example.SCDProiectv2.Models.Role;
 import com.example.SCDProiectv2.Repositories.CourierRepository;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -36,13 +43,93 @@ public class CourierService {
     public List<Courier> getAllCouriers() {
         return courierRepository.findAll();
     }
-    public Set<CourierDTO> getCouriersManagedByAdmin(Integer adminId) {
+    public Set<CourierSearchDTO> getCouriersManagedByAdmin(Integer adminId) {
         Courier admin = courierRepository.findById(adminId)
                 .orElseThrow(() -> new RuntimeException("Admin not found with ID: " + adminId));
 
-        // Convert the couriers to DTOs
         return admin.getCouriers().stream()
-                .map(courier -> new CourierDTO(courier.getId(), courier.getUsername()))
+                .map(courier -> new CourierSearchDTO(courier.getId(), courier.getUsername()))
                 .collect(Collectors.toSet());
+    }
+    public ResponseEntity<?> deleteCourier(String username) {
+        try{
+            Optional<Courier> courier = courierRepository.findByUsername(username);
+            if (courier.isPresent()) {
+                courierRepository.delete(courier.get());
+                return ResponseEntity.status(HttpStatus.OK).body("User "+username+" successfully deleted!");
+            } else{
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User "+username+" not found!");
+            }
+        } catch (Exception e){
+            //e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+        }
+
+    }
+    public ResponseEntity<?> updateCourier(CourierDTO courierDTO) {
+        try{
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            String username = authentication.getName();
+            Optional<Courier> courier = courierRepository.findByUsername(username);
+            if(courier.isPresent()) {
+                if(courierDTO.getUsername() != null) {
+                    courier.get().setUsername(courierDTO.getUsername());
+                }
+                if(courierDTO.getPassword() != null) {
+                    courier.get().setPassword(courierDTO.getPassword());
+                }
+                if(courierDTO.getEmail() != null) {
+                    courier.get().setEmail(courierDTO.getEmail());
+                }
+                if(courierDTO.getFirstName() != null){
+                    courier.get().setFirstName(courierDTO.getFirstName());
+                }
+                if(courierDTO.getLastName() != null){
+                    courier.get().setLastName(courierDTO.getLastName());
+                }
+                courierRepository.save(courier.get());
+                return ResponseEntity.status(HttpStatus.OK).body("Courier updated successfully!");
+            } else
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Courier not found.");
+
+        } catch (Exception e){
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+
+    public ResponseEntity<?> promoteToManager(String username){
+        try{
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            String managerName = authentication.getName();
+            Optional<Courier> courier = courierRepository.findByUsername(username);
+            if(courier.isPresent()) {
+                courier.get().setRole(Role.ADMIN);
+                courierRepository.save(courier.get());
+                return ResponseEntity.status(HttpStatus.OK).body("Courier has been promoted to manager successfully!");
+            }
+            else {
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Courier not found.");
+            }
+        }catch (Exception e){
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+
+    public ResponseEntity<?> demodeFromManager(String username){
+        try{
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            String managerName = authentication.getName();
+            Optional<Courier> courier = courierRepository.findByUsername(username);
+            if(courier.isPresent()) {
+                courier.get().setRole(Role.USER);
+                courierRepository.save(courier.get());
+                return ResponseEntity.status(HttpStatus.OK).body("Courier has been demoted from manager successfully!");
+            }
+            else {
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Courier not found.");
+            }
+        }catch (Exception e){
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
 }
