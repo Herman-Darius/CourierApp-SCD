@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.labelShowCurrentUser = new System.Windows.Forms.Label();
-            this.buttonCompleted = new System.Windows.Forms.Button();
+            this.buttonComplete = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.buttonAccepted = new System.Windows.Forms.Button();
+            this.buttonAccept = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.buttonExit = new System.Windows.Forms.Button();
+            this.comboBoxNewDeliveries = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBoxMyDeliveries = new System.Windows.Forms.ComboBox();
+            this.listBoxCouriers = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,19 +54,20 @@
             this.labelShowCurrentUser.Text = "Connected as:";
             this.labelShowCurrentUser.Click += new System.EventHandler(this.labelShowCurrentUser_Click);
             // 
-            // buttonCompleted
+            // buttonComplete
             // 
-            this.buttonCompleted.Location = new System.Drawing.Point(89, 152);
-            this.buttonCompleted.Name = "buttonCompleted";
-            this.buttonCompleted.Size = new System.Drawing.Size(75, 23);
-            this.buttonCompleted.TabIndex = 3;
-            this.buttonCompleted.Text = "Completed";
-            this.buttonCompleted.UseVisualStyleBackColor = true;
+            this.buttonComplete.Location = new System.Drawing.Point(89, 152);
+            this.buttonComplete.Name = "buttonComplete";
+            this.buttonComplete.Size = new System.Drawing.Size(75, 23);
+            this.buttonComplete.TabIndex = 3;
+            this.buttonComplete.Text = "Complete";
+            this.buttonComplete.UseVisualStyleBackColor = true;
+            this.buttonComplete.Click += new System.EventHandler(this.buttonComplete_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 49);
+            this.label1.Location = new System.Drawing.Point(5, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 5;
@@ -80,14 +81,15 @@
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 6;
             // 
-            // buttonAccepted
+            // buttonAccept
             // 
-            this.buttonAccepted.Location = new System.Drawing.Point(8, 152);
-            this.buttonAccepted.Name = "buttonAccepted";
-            this.buttonAccepted.Size = new System.Drawing.Size(75, 23);
-            this.buttonAccepted.TabIndex = 7;
-            this.buttonAccepted.Text = "Accepted";
-            this.buttonAccepted.UseVisualStyleBackColor = true;
+            this.buttonAccept.Location = new System.Drawing.Point(8, 152);
+            this.buttonAccept.Name = "buttonAccept";
+            this.buttonAccept.Size = new System.Drawing.Size(75, 23);
+            this.buttonAccept.TabIndex = 7;
+            this.buttonAccept.Text = "Accept";
+            this.buttonAccept.UseVisualStyleBackColor = true;
+            this.buttonAccept.Click += new System.EventHandler(this.buttonAccept_Click);
             // 
             // buttonRefresh
             // 
@@ -97,39 +99,58 @@
             this.buttonRefresh.Size = new System.Drawing.Size(34, 32);
             this.buttonRefresh.TabIndex = 9;
             this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
-            // button5
+            // buttonExit
             // 
-            this.button5.Location = new System.Drawing.Point(332, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "Exit";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.buttonExit.Location = new System.Drawing.Point(332, 4);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(75, 23);
+            this.buttonExit.TabIndex = 10;
+            this.buttonExit.Text = "Exit";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.button5_Click);
             // 
-            // comboBox1
+            // comboBoxNewDeliveries
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(89, 15);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(110, 21);
-            this.comboBox1.TabIndex = 14;
+            this.comboBoxNewDeliveries.FormattingEnabled = true;
+            this.comboBoxNewDeliveries.Location = new System.Drawing.Point(89, 15);
+            this.comboBoxNewDeliveries.Name = "comboBoxNewDeliveries";
+            this.comboBoxNewDeliveries.Size = new System.Drawing.Size(110, 21);
+            this.comboBoxNewDeliveries.TabIndex = 14;
+            this.comboBoxNewDeliveries.SelectedIndexChanged += new System.EventHandler(this.comboBoxNewDeliveries_SelectedIndexChanged);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.listBox1);
+            this.panel1.Controls.Add(this.comboBoxMyDeliveries);
+            this.panel1.Controls.Add(this.listBoxCouriers);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.buttonAccepted);
-            this.panel1.Controls.Add(this.buttonCompleted);
+            this.panel1.Controls.Add(this.comboBoxNewDeliveries);
+            this.panel1.Controls.Add(this.buttonAccept);
+            this.panel1.Controls.Add(this.buttonComplete);
             this.panel1.Controls.Add(this.buttonRefresh);
             this.panel1.Location = new System.Drawing.Point(13, 33);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(394, 192);
             this.panel1.TabIndex = 15;
+            // 
+            // comboBoxMyDeliveries
+            // 
+            this.comboBoxMyDeliveries.FormattingEnabled = true;
+            this.comboBoxMyDeliveries.Location = new System.Drawing.Point(89, 46);
+            this.comboBoxMyDeliveries.Name = "comboBoxMyDeliveries";
+            this.comboBoxMyDeliveries.Size = new System.Drawing.Size(110, 21);
+            this.comboBoxMyDeliveries.TabIndex = 17;
+            this.comboBoxMyDeliveries.SelectedIndexChanged += new System.EventHandler(this.comboBoxMyDeliveries_SelectedIndexChanged);
+            // 
+            // listBoxCouriers
+            // 
+            this.listBoxCouriers.FormattingEnabled = true;
+            this.listBoxCouriers.Location = new System.Drawing.Point(210, 15);
+            this.listBoxCouriers.Name = "listBoxCouriers";
+            this.listBoxCouriers.Size = new System.Drawing.Size(179, 160);
+            this.listBoxCouriers.TabIndex = 16;
             // 
             // label5
             // 
@@ -140,31 +161,19 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "New deliveries:";
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(210, 15);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(179, 160);
-            this.listBox1.TabIndex = 16;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(89, 46);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(110, 21);
-            this.comboBox2.TabIndex = 17;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(417, 241);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelShowCurrentUser);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -178,16 +187,16 @@
         #endregion
 
         private System.Windows.Forms.Label labelShowCurrentUser;
-        private System.Windows.Forms.Button buttonCompleted;
+        private System.Windows.Forms.Button buttonComplete;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button buttonAccepted;
+        private System.Windows.Forms.Button buttonAccept;
         private System.Windows.Forms.Button buttonRefresh;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.ComboBox comboBoxNewDeliveries;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ComboBox comboBoxMyDeliveries;
+        private System.Windows.Forms.ListBox listBoxCouriers;
         private System.Windows.Forms.Label label5;
     }
 }

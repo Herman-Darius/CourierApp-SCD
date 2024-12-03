@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.IdentityModel.Tokens.Jwt;
 using ManagementUI_CourierApp.Services;
 using ManagementUI_CourierApp.Models;
+using System.Net.Http.Json;
 
 namespace ManagementUI_CourierApp
 {
@@ -95,7 +96,7 @@ namespace ManagementUI_CourierApp
                         }
                         else if (role == "USER")
                         {
-                            MainForm mainForm = new MainForm(username);
+                            MainForm mainForm = new MainForm(username, authResponse.Token);
                             mainForm.Show();
                             this.Hide();
                         }
@@ -124,12 +125,35 @@ namespace ManagementUI_CourierApp
 
         private async void buttonRegister_Click(object sender, EventArgs e)
         {
-            //las asa pana imi dau seama ce sa fac cu butonu de register
-            string username = "admin2";
-            string email = "darius.herman21@yahoo.com";
-            string password = "admin";
+            RegisterForm form = new RegisterForm();
+            form.Show();
+        }
 
-            await RegisterUserAsync(username, email, password);
+        //My methods
+        public async Task<AuthenticationResponse> Login(string username, string password)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://localhost:8080");
+
+                var loginData = new { Username = username, Password = password }; // Login payload
+                HttpResponseMessage response = await client.PostAsJsonAsync("/login", loginData);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var authResponse = await response.Content.ReadFromJsonAsync<AuthenticationResponse>();
+                    if (authResponse != null)
+                    {
+                        return authResponse;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show($"Login failed: {response.StatusCode}");
+                }
+
+                return null;
+            }
         }
 
         private async Task RegisterUserAsync(string username, string email, string password)

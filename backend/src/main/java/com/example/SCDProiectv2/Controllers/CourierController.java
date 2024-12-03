@@ -3,6 +3,7 @@ package com.example.SCDProiectv2.Controllers;
 import com.example.SCDProiectv2.DTOs.CourierDTO;
 import com.example.SCDProiectv2.DTOs.CourierSearchDTO;
 import com.example.SCDProiectv2.Models.Courier;
+import com.example.SCDProiectv2.Models.Role;
 import com.example.SCDProiectv2.Repositories.CourierRepository;
 import com.example.SCDProiectv2.Services.CourierService;
 import lombok.AllArgsConstructor;
@@ -65,4 +66,20 @@ public class CourierController {
     public ResponseEntity<?> demoteCourier(@PathVariable String username) {
         return ResponseEntity.ok(courierService.demodeFromManager(username));
     }
+
+    @GetMapping("/courier/get-all/{role}")
+    public ResponseEntity<?> getAllCouriers(@PathVariable String role) {
+        return ResponseEntity.ok(courierService.getAllCourierByRole(role));
+    }
+
+    @PostMapping("/courier/take-management/{username}")
+    public ResponseEntity<?> takeCourier(@PathVariable String username) {
+        return ResponseEntity.ok(courierService.takeManagementOverCourier(username));
+    }
+
+    @PostMapping("/courier/revoke-management/{username}")
+    public ResponseEntity<?> revokeCourier(@PathVariable String username) {
+        return ResponseEntity.ok(courierService.revokeManagementOverCourier(username));
+    }
+
 }

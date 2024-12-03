@@ -53,4 +53,5 @@ public class PackageController {
     public ResponseEntity<?> completeDelivery(@PathVariable String deliveryAddress) {
         return ResponseEntity.ok().body(packageService.changeDeliveryStatus(deliveryAddress,PackageStatus.DELIVERED));
     }
+
 }

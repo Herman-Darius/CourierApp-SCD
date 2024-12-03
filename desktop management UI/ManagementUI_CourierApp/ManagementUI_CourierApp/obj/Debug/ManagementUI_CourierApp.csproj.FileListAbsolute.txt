@@ -47,3 +47,4 @@ C:\Users\Herman Darius-Razvan\source\repos\ManagementUI_CourierApp\ManagementUI_
 C:\Users\Herman Darius-Razvan\source\repos\ManagementUI_CourierApp\ManagementUI_CourierApp\bin\Debug\System.Net.Http.Json.dll
 C:\Users\Herman Darius-Razvan\source\repos\ManagementUI_CourierApp\ManagementUI_CourierApp\bin\Debug\System.IO.Pipelines.xml
 C:\Users\Herman Darius-Razvan\source\repos\ManagementUI_CourierApp\ManagementUI_CourierApp\bin\Debug\System.Net.Http.Json.xml
+C:\Users\Herman Darius-Razvan\source\repos\ManagementUI_CourierApp\ManagementUI_CourierApp\obj\Debug\ManagementUI_CourierApp.RegisterForm.resources

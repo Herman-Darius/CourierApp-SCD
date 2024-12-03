@@ -1,5 +1,7 @@
 package com.example.SCDProiectv2.Models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -43,9 +45,11 @@ public class Courier implements UserDetails, Serializable {
 
     @ManyToOne
     @JoinColumn(name = "manager_id")
+    @JsonBackReference
     private Courier manager;
 
     @OneToMany(mappedBy = "manager", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private Set<Courier> couriers;
 
 

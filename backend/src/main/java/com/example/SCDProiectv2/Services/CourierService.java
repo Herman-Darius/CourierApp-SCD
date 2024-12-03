@@ -6,8 +6,6 @@ import com.example.SCDProiectv2.Models.Courier;
 import com.example.SCDProiectv2.Models.Role;
 import com.example.SCDProiectv2.Repositories.CourierRepository;
 import jakarta.transaction.Transactional;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -43,6 +41,19 @@ public class CourierService {
     public List<Courier> getAllCouriers() {
         return courierRepository.findAll();
     }
+    public List<CourierDTO> getAllCourierByRole(String role){
+        /*Role roleEnum = Role.valueOf(role.toUpperCase());
+        return courierRepository.findAllByRole(roleEnum);*/
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String username = auth.getName();
+        Optional<Courier> manager = courierRepository.findByUsername(username);
+
+        Role roleEnum = Role.valueOf(role.toUpperCase());
+        return courierRepository.findAllByRole(roleEnum).stream()
+                .filter(courier -> !courier.getUsername().equals(username))
+                .map(CourierDTO::new) // Automatically maps each entity to a DTO using the constructor
+                .toList();
+    }
     public Set<CourierSearchDTO> getCouriersManagedByAdmin(Integer adminId) {
         Courier admin = courierRepository.findById(adminId)
                 .orElseThrow(() -> new RuntimeException("Admin not found with ID: " + adminId));
@@ -61,7 +72,6 @@ public class CourierService {
                 return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User "+username+" not found!");
             }
         } catch (Exception e){
-            //e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
         }
 
@@ -132,4 +142,43 @@ public class CourierService {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
+
+    public ResponseEntity<?> takeManagementOverCourier(String username){
+        try{
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            String managerName = authentication.getName();
+            Optional<Courier> manager = courierRepository.findByUsername(managerName);
+            Optional<Courier> courier = courierRepository.findByUsername(username);
+            if(courier.isPresent() && manager.isPresent()) {
+                courier.get().setManager(manager.get());
+                courierRepository.save(courier.get());
+                return ResponseEntity.status(HttpStatus.OK).body("Management over" + courier.get().getUsername() +"has been taken successfully!");
+            } else
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Courier not found.");
+
+        } catch (Exception e){
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+        }
+    }
+
+    public ResponseEntity<?> revokeManagementOverCourier(String username){
+        try{
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            String managerName = authentication.getName();
+            Optional<Courier> manager = courierRepository.findByUsername(managerName);
+            Optional<Courier> courier = courierRepository.findByUsername(username);
+            if(courier.isPresent() && manager.isPresent()) {
+                courier.get().setManager(null);
+                courierRepository.save(courier.get());
+                return ResponseEntity.status(HttpStatus.OK).body("Management over" + courier.get().getUsername() +"has been revoked!");
+            }
+            else {
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Courier not found.");
+            }
+
+        } catch (Exception e){
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+        }
+    }
+
 }

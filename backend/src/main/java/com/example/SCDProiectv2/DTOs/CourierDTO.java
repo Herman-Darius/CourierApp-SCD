@@ -1,12 +1,9 @@
 package com.example.SCDProiectv2.DTOs;
 
+import com.example.SCDProiectv2.Models.Courier;
 import lombok.*;
 
 @Data
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
 public class CourierDTO {
     //private Integer id;
     private String username;
@@ -14,8 +11,17 @@ public class CourierDTO {
     private String firstName;
     private String lastName;
     private String email;
+    private String managerUsername;
+    private String role;
 
-    //private String phone;
+    public CourierDTO(Courier courier) {
+        this.firstName = courier.getFirstName();
+        this.lastName = courier.getLastName();
+        this.username = courier.getUsername();
+        this.email = courier.getEmail();
+        this.managerUsername = courier.getManager() != null ? courier.getManager().getUsername() : "None";
+        this.role = courier.getRole().toString();
+    }
 
 
 }

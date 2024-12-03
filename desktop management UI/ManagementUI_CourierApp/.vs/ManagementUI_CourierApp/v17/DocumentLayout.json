@@ -3,40 +3,64 @@
   "WorkspaceRootPath": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|c:\\users\\herman darius-razvan\\source\\repos\\managementui_courierapp\\managementui_courierapp\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\managementui_courierapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\managementui_courierapp\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\managementui_courierapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|c:\\users\\herman darius-razvan\\source\\repos\\managementui_courierapp\\managementui_courierapp\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\managementui_courierapp\\models\\deliverypackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\models\\deliverypackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\managementui_courierapp\\models\\courier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\models\\courier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\managementui_courierapp\\dtos\\courierdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\dtos\\courierdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\managementui_courierapp\\models\\packagestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\models\\packagestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\managementui_courierapp\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\managementui_courierapp\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\managementui_courierapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\managementui_courierapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\managementui_courierapp\\adminform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\adminform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\managementui_courierapp\\models\\courier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\models\\courier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\managementui_courierapp\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\managementui_courierapp\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\managementui_courierapp\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\managementui_courierapp\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\managementui_courierapp\\models\\authenticationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\models\\authenticationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|ManagementUI_CourierApp||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
@@ -54,22 +78,6 @@
       "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\services\\jwthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\managementui_courierapp\\models\\deliverypackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\models\\deliverypackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\managementui_courierapp\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\managementui_courierapp\\models\\authenticationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\models\\authenticationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\managementui_courierapp\\models\\packagestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\models\\packagestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\managementui_courierapp\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE9FD17E-5496-4B2B-990E-A0D79001E7FD}|ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj|solutionrelative:managementui_courierapp\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -81,11 +89,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 11,
               "Title": "LoginForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\LoginForm.cs",
               "RelativeDocumentMoniker": "ManagementUI_CourierApp\\LoginForm.cs",
@@ -93,24 +101,26 @@
               "RelativeToolTip": "ManagementUI_CourierApp\\LoginForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T15:56:14.986Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\LoginForm.cs",
               "RelativeDocumentMoniker": "ManagementUI_CourierApp\\LoginForm.cs",
               "ToolTip": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\LoginForm.cs",
               "RelativeToolTip": "ManagementUI_CourierApp\\LoginForm.cs",
-              "ViewState": "AQIAAI8AAAAAAAAAAAAiwFEAAABMAAAA",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAMwH0AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T15:58:25.423Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "MainForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\MainForm.cs",
               "RelativeDocumentMoniker": "ManagementUI_CourierApp\\MainForm.cs",
@@ -118,7 +128,8 @@
               "RelativeToolTip": "ManagementUI_CourierApp\\MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T16:34:18.073Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -135,20 +146,148 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\MainForm.cs",
+              "RelativeDocumentMoniker": "ManagementUI_CourierApp\\MainForm.cs",
+              "ToolTip": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\MainForm.cs",
+              "RelativeToolTip": "ManagementUI_CourierApp\\MainForm.cs",
+              "ViewState": "AQIAAKoAAAAAAAAAAAAYwBwBAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T18:26:36.484Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminForm.cs",
+              "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\AdminForm.cs",
+              "RelativeDocumentMoniker": "ManagementUI_CourierApp\\AdminForm.cs",
+              "ToolTip": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\AdminForm.cs",
+              "RelativeToolTip": "ManagementUI_CourierApp\\AdminForm.cs",
+              "ViewState": "AQIAAFMBAAAAAAAAAAArwHEBAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T15:33:55.522Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DeliveryPackage.cs",
+              "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\Models\\DeliveryPackage.cs",
+              "RelativeDocumentMoniker": "ManagementUI_CourierApp\\Models\\DeliveryPackage.cs",
+              "ToolTip": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\Models\\DeliveryPackage.cs",
+              "RelativeToolTip": "ManagementUI_CourierApp\\Models\\DeliveryPackage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T16:26:15.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "AdminForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\AdminForm.Designer.cs",
               "RelativeDocumentMoniker": "ManagementUI_CourierApp\\AdminForm.Designer.cs",
               "ToolTip": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\AdminForm.Designer.cs",
               "RelativeToolTip": "ManagementUI_CourierApp\\AdminForm.Designer.cs",
-              "ViewState": "AQIAABABAAAAAAAAAAAewBoBAAAoAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwHgBAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-16T14:39:44.795Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
+              "Title": "Courier.cs",
+              "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\Models\\Courier.cs",
+              "RelativeDocumentMoniker": "ManagementUI_CourierApp\\Models\\Courier.cs",
+              "ToolTip": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\Models\\Courier.cs",
+              "RelativeToolTip": "ManagementUI_CourierApp\\Models\\Courier.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T14:15:46.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CourierDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\DTOs\\CourierDTO.cs",
+              "RelativeDocumentMoniker": "ManagementUI_CourierApp\\DTOs\\CourierDTO.cs",
+              "ToolTip": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\DTOs\\CourierDTO.cs",
+              "RelativeToolTip": "ManagementUI_CourierApp\\DTOs\\CourierDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T11:37:11.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PackageStatus.cs",
+              "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\Models\\PackageStatus.cs",
+              "RelativeDocumentMoniker": "ManagementUI_CourierApp\\Models\\PackageStatus.cs",
+              "ToolTip": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\Models\\PackageStatus.cs",
+              "RelativeToolTip": "ManagementUI_CourierApp\\Models\\PackageStatus.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T16:09:29.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\MainForm.Designer.cs",
+              "RelativeDocumentMoniker": "ManagementUI_CourierApp\\MainForm.Designer.cs",
+              "ToolTip": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\MainForm.Designer.cs",
+              "RelativeToolTip": "ManagementUI_CourierApp\\MainForm.Designer.cs",
+              "ViewState": "AQIAAHwAAAAAAAAAAAAUwJEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T16:11:12.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RegisterForm.cs",
+              "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\RegisterForm.cs",
+              "RelativeDocumentMoniker": "ManagementUI_CourierApp\\RegisterForm.cs",
+              "ToolTip": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\RegisterForm.cs",
+              "RelativeToolTip": "ManagementUI_CourierApp\\RegisterForm.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAjwCEAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T16:05:11.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RegisterForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\RegisterForm.cs",
+              "RelativeDocumentMoniker": "ManagementUI_CourierApp\\RegisterForm.cs",
+              "ToolTip": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\RegisterForm.cs [Design]",
+              "RelativeToolTip": "ManagementUI_CourierApp\\RegisterForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T14:11:49.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AuthenticationResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\Models\\AuthenticationResponse.cs",
+              "RelativeDocumentMoniker": "ManagementUI_CourierApp\\Models\\AuthenticationResponse.cs",
+              "ToolTip": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\Models\\AuthenticationResponse.cs",
+              "RelativeToolTip": "ManagementUI_CourierApp\\Models\\AuthenticationResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T15:01:50.954Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "ManagementUI_CourierApp",
               "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj",
               "RelativeDocumentMoniker": "ManagementUI_CourierApp\\ManagementUI_CourierApp.csproj",
@@ -159,7 +298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "ApiService.cs",
               "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\Services\\ApiService.cs",
               "RelativeDocumentMoniker": "ManagementUI_CourierApp\\Services\\ApiService.cs",
@@ -171,7 +310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "AuthTokenService.cs",
               "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\Services\\AuthTokenService.cs",
               "RelativeDocumentMoniker": "ManagementUI_CourierApp\\Services\\AuthTokenService.cs",
@@ -183,20 +322,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AdminForm.cs",
-              "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\AdminForm.cs",
-              "RelativeDocumentMoniker": "ManagementUI_CourierApp\\AdminForm.cs",
-              "ToolTip": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\AdminForm.cs",
-              "RelativeToolTip": "ManagementUI_CourierApp\\AdminForm.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T15:33:55.522Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "JwtHelper.cs",
               "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\Services\\JwtHelper.cs",
               "RelativeDocumentMoniker": "ManagementUI_CourierApp\\Services\\JwtHelper.cs",
@@ -208,91 +334,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CourierDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\DTOs\\CourierDTO.cs",
-              "RelativeDocumentMoniker": "ManagementUI_CourierApp\\DTOs\\CourierDTO.cs",
-              "ToolTip": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\DTOs\\CourierDTO.cs",
-              "RelativeToolTip": "ManagementUI_CourierApp\\DTOs\\CourierDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T11:37:11.367Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\MainForm.Designer.cs",
-              "RelativeDocumentMoniker": "ManagementUI_CourierApp\\MainForm.Designer.cs",
-              "ToolTip": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\MainForm.Designer.cs",
-              "RelativeToolTip": "ManagementUI_CourierApp\\MainForm.Designer.cs",
-              "ViewState": "AQIAAGAAAAAAAAAAAAAewI4AAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T16:11:12.43Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "DeliveryPackage.cs",
-              "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\Models\\DeliveryPackage.cs",
-              "RelativeDocumentMoniker": "ManagementUI_CourierApp\\Models\\DeliveryPackage.cs",
-              "ToolTip": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\Models\\DeliveryPackage.cs",
-              "RelativeToolTip": "ManagementUI_CourierApp\\Models\\DeliveryPackage.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA0AAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T16:26:15.451Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\MainForm.cs",
-              "RelativeDocumentMoniker": "ManagementUI_CourierApp\\MainForm.cs",
-              "ToolTip": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\MainForm.cs",
-              "RelativeToolTip": "ManagementUI_CourierApp\\MainForm.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAIA0wC0AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T11:47:51.374Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Courier.cs",
-              "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\Models\\Courier.cs",
-              "RelativeDocumentMoniker": "ManagementUI_CourierApp\\Models\\Courier.cs",
-              "ToolTip": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\Models\\Courier.cs",
-              "RelativeToolTip": "ManagementUI_CourierApp\\Models\\Courier.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T14:15:46.474Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AuthenticationResponse.cs",
-              "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\Models\\AuthenticationResponse.cs",
-              "RelativeDocumentMoniker": "ManagementUI_CourierApp\\Models\\AuthenticationResponse.cs",
-              "ToolTip": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\Models\\AuthenticationResponse.cs",
-              "RelativeToolTip": "ManagementUI_CourierApp\\Models\\AuthenticationResponse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T15:01:50.954Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "PackageStatus.cs",
-              "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\Models\\PackageStatus.cs",
-              "RelativeDocumentMoniker": "ManagementUI_CourierApp\\Models\\PackageStatus.cs",
-              "ToolTip": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\Models\\PackageStatus.cs",
-              "RelativeToolTip": "ManagementUI_CourierApp\\Models\\PackageStatus.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T16:09:29.667Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\Herman Darius-Razvan\\source\\repos\\ManagementUI_CourierApp\\ManagementUI_CourierApp\\Models\\Product.cs",
               "RelativeDocumentMoniker": "ManagementUI_CourierApp\\Models\\Product.cs",
