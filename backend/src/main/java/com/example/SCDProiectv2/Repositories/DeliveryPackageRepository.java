@@ -18,5 +18,7 @@ public interface DeliveryPackageRepository extends JpaRepository<DeliveryPackage
     Optional<DeliveryPackage> findByDeliveryAddress(String deliveryAddress);
 
     Optional<DeliveryPackage> findByCourierIdAndStatus(Integer courierId, String status);
+
+    Optional<DeliveryPackage> findByAwbNumber(String awbNumber);
     //Optional<DeliveryPackage> findByPhoneNumberAndName(String phoneNumber, String name);
 }

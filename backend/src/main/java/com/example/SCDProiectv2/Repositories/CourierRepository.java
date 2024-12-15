@@ -21,4 +21,6 @@ public interface CourierRepository extends JpaRepository<Courier, Integer> {
     @Query("SELECT c FROM Courier c LEFT JOIN FETCH c.manager")
     List<Courier> findAllWithManagers();
 
+    boolean existsByUsername(String username);
+
 }

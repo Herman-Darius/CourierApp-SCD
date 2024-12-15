@@ -33,7 +33,7 @@ public class Courier implements UserDetails, Serializable {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "username")
+    @Column(name = "username", unique = true)
     private String username;
 
     @Column(name = "password")

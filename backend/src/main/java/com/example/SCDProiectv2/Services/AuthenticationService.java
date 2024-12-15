@@ -5,10 +5,12 @@ import com.example.SCDProiectv2.Models.Role;
 import com.example.SCDProiectv2.Models.Courier;
 import com.example.SCDProiectv2.Repositories.CourierRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 @Service
 @AllArgsConstructor
@@ -20,6 +22,9 @@ public class AuthenticationService {
 
     public AuthenticationResponse register(Courier request){
         Courier user = new Courier();
+        if (courierRepository.existsByUsername(request.getUsername())){
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Username already exists");
+        }
         user.setUsername(request.getUsername());
         user.setPassword(passwordEncoder.encode(request.getPassword()));
         user.setFirstName(request.getFirstName());

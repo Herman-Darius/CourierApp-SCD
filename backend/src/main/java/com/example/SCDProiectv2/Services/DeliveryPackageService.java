@@ -2,6 +2,7 @@ package com.example.SCDProiectv2.Services;
 
 import com.example.SCDProiectv2.DTOs.PackageCreateRequestDTO;
 import com.example.SCDProiectv2.DTOs.PackageDetailsDTO;
+import com.example.SCDProiectv2.DTOs.PackageEditDTO;
 import com.example.SCDProiectv2.Models.Courier;
 import com.example.SCDProiectv2.Models.DeliveryPackage;
 import com.example.SCDProiectv2.Models.PackageStatus;
@@ -17,10 +18,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 @Service
 public class DeliveryPackageService {
@@ -80,20 +78,24 @@ public class DeliveryPackageService {
     //De aici fac iar ca m-am enervat pe mine ala din trecut de a facut prostii
 
     @Transactional
-    public ResponseEntity<?> createDeliveryPackage(PackageCreateRequestDTO deliveryPackageDTO) {
+    public String createDeliveryPackage(PackageCreateRequestDTO deliveryPackageDTO) {
         try{
             //Authentication auth = SecurityContextHolder.getContext().getAuthentication();
             //String managerName = auth.getName();
+            String awbNumber = generateAWBNumber();
             DeliveryPackage myPackage = new DeliveryPackage();
             myPackage.setDeliveryAddress(deliveryPackageDTO.getDeliveryAddress());
             myPackage.setEmail(deliveryPackageDTO.getEmail());
             myPackage.setPhoneNumber(deliveryPackageDTO.getPhoneNumber());
             myPackage.setCreatedOn(LocalDateTime.now());
             myPackage.setStatus(PackageStatus.NEW);
+            myPackage.setAwbNumber(awbNumber);
+            System.out.println(awbNumber);
             packageRepository.save(myPackage);
-            return ResponseEntity.status(HttpStatus.CREATED).body("Package created successfully");
+            //return ResponseEntity.status(HttpStatus.CREATED).body("Package created successfully");
+            return awbNumber;
         } catch (Exception e){
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("ERROR FROM BACKEND ---------------->" + e.getMessage());
+            return "ERROR FROM BACKEND ---------------->" + e.getMessage();
         }
     }
 
@@ -157,6 +159,40 @@ public class DeliveryPackageService {
         }
     }
 
+    public String generateAWBNumber() {
+        return UUID.randomUUID().toString().replace("-", "").toUpperCase();
+    }
 
 
+    public DeliveryPackage findPackageByAWB(String awbNumber) {
+        Optional<DeliveryPackage> myPackage = packageRepository.findByAwbNumber(awbNumber);
+        return myPackage.orElse(null);
+    }
+
+    public ResponseEntity<?> deletePackageByAWB(String awbNumber) {
+        Optional<DeliveryPackage> myPackage = packageRepository.findByAwbNumber(awbNumber);
+        if(myPackage.isPresent()) {
+            packageRepository.delete(myPackage.get());
+            return ResponseEntity.status(HttpStatus.OK).body("Package deleted successfully");
+        }
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Package not found");
+
+    }
+
+    public ResponseEntity<?> editPackageByAWB(PackageEditDTO packageEditDTO){
+        Optional<DeliveryPackage> myPackage = packageRepository.findByAwbNumber(packageEditDTO.getAwbNumber());
+
+        if(myPackage.isPresent()) {
+            LocalDateTime creationTime = myPackage.get().getCreatedOn();
+            System.out.println(creationTime);
+            if (creationTime != null && creationTime.isBefore(LocalDateTime.now().minusMinutes(5))) {
+                return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Cannot edit the package. More than 5 minutes have passed since its creation.");
+            }
+            myPackage.get().setDeliveryAddress(packageEditDTO.getDeliveryAddress());
+            System.out.println(myPackage.get().getDeliveryAddress()+ " ASTA E ADRESA DE INTRA");
+            packageRepository.save(myPackage.get());
+            return ResponseEntity.status(HttpStatus.OK).body("Package edited successfully");
+        }
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Package not found");
+    }
 }

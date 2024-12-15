@@ -1,0 +1,47 @@
+<h2>Order: {{ awbNumber2 }}</h2>
+
+<div *ngIf="orderDetails" class="order-details">
+  <div class="order-info">
+    <h3>Order Information</h3>
+    <p><strong>AWB Number:</strong> {{ orderDetails.awbNumber }}</p>
+    <p><strong>Delivery Address:</strong>
+      <span *ngIf="!showEditForm">{{ orderDetails.deliveryAddress }}</span>
+      <input *ngIf="showEditForm" [(ngModel)]="editableAddress" type="text" />
+    </p>
+    <p><strong>Email:</strong> {{ orderDetails.email }}</p>
+    <p><strong>Phone Number:</strong> {{ orderDetails.phoneNumber }}</p>
+    <p><strong>Status:</strong> {{ orderDetails.status }}</p>
+  </div>
+
+  <div *ngIf="orderDetails.orderItems && orderDetails.orderItems.length > 0" class="order-items">
+    <h4>Order Items</h4>
+    <table class="order-items-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of orderDetails.orderItems">
+          <td>{{ item.name }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>${{ item.price }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div>
+    <button *ngIf="!showEditForm" (click)="editAddress()" [disabled]="isButtonDisabled">Edit Address</button>
+    <button *ngIf="showEditForm" (click)="saveEditedAddress()" [disabled]="isButtonDisabled">Save</button>
+    <button (click)="deleteOrder()" [disabled]="isButtonDisabled">Delete</button>
+
+
+  </div>
+</div>
+
+<div *ngIf="errorMessage" class="error-message">
+  <p>{{ errorMessage }}</p>
+</div>

@@ -1,6 +1,7 @@
 package com.example.SCDProiectv2.Models;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,8 +9,7 @@ import java.time.LocalDateTime;
 import java.util.Set;
 
 @Entity
-@Setter
-@Getter
+@Data
 @Table(name = "Package")
 public class DeliveryPackage {
     @Id
@@ -39,16 +39,8 @@ public class DeliveryPackage {
     @Column(name = "status")
     private PackageStatus status;
 
-    // Many-to-many relationship with Product
-    /*
-    @ManyToMany
-    @JoinTable(
-            name = "package_products",
-            joinColumns = @JoinColumn(name = "package_id"),
-            inverseJoinColumns = @JoinColumn(name = "product_id")
-    )
-    private Set<Product> products;
-    */
+    @Column(name = "awb_number", nullable = false, unique = true)
+    private String awbNumber;
 
     @Override
     public String toString() {

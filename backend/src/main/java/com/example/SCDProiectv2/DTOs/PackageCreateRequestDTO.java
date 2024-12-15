@@ -11,4 +11,5 @@ public class PackageCreateRequestDTO {
     private String deliveryAddress;
     private String email;
     private String phoneNumber;
+    private String awbNumber;
 }

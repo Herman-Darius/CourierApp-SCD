@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrl: './app.component.css'
 })
-
 export class AppComponent {
-  selectedProducts: any[] = []; // To store selected products
-  showOrderForm: boolean = false; // To toggle between product list and order form
-  title = 'courier-app'; 
-  receiveSelectedProducts(products: any[]): void {
-    this.selectedProducts = products; // Update selectedProducts
-    this.showOrderForm = true; // Show the order form
+  title = 'courier-app';
+  constructor(private router: Router) {}
+
+  navigateToCreateDelivery() {
+    this.router.navigate(['/create-delivery']);
   }
 }
+

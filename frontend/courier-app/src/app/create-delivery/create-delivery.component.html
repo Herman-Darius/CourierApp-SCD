@@ -1,0 +1,47 @@
+<h2>Create New Delivery</h2>
+<form [formGroup]="deliveryForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="deliveryAddress">Delivery Address:</label>
+    <input id="deliveryAddress" formControlName="deliveryAddress" type="text" />
+    <div *ngIf="deliveryForm.get('deliveryAddress')?.invalid && deliveryForm.get('deliveryAddress')?.touched">
+      Delivery Address is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email" type="email" />
+    <div *ngIf="deliveryForm.get('email')?.invalid && deliveryForm.get('email')?.touched">
+      Valid email is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="phoneNumber">Phone Number:</label>
+    <input id="phoneNumber" formControlName="phoneNumber" type="text" />
+    <div *ngIf="deliveryForm.get('phoneNumber')?.invalid && deliveryForm.get('phoneNumber')?.touched">
+      Phone Number is required.
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="deliveryForm.invalid">Create Delivery</button>
+</form>
+
+<div *ngIf="successMessage" class="success-message">
+  {{ successMessage }}
+  <div *ngIf="awbNumber">
+    <p>AWB: {{ awbNumber }}</p>
+    <button *ngIf="awbNumber" (click)="viewOrderDetails()">View Order Details</button>
+  </div>
+</div>
+
+<div>
+  <label for="manualAWB">Enter AWB Number:</label>
+  <input id="manualAWB" [(ngModel)]="manualAWB" type="text" placeholder="Enter AWB manually" />
+</div>
+
+<button (click)="orderDetails()" [disabled]="!manualAWB">View Order Details</button>
+
+<div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+

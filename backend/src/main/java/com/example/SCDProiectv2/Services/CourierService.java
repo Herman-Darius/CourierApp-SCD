@@ -150,9 +150,15 @@ public class CourierService {
             Optional<Courier> manager = courierRepository.findByUsername(managerName);
             Optional<Courier> courier = courierRepository.findByUsername(username);
             if(courier.isPresent() && manager.isPresent()) {
-                courier.get().setManager(manager.get());
-                courierRepository.save(courier.get());
-                return ResponseEntity.status(HttpStatus.OK).body("Management over" + courier.get().getUsername() +"has been taken successfully!");
+                if(courier.get().getRole() == Role.USER || courier.get().getManager() == null) {
+                    courier.get().setManager(manager.get());
+                    courierRepository.save(courier.get());
+                    return ResponseEntity.status(HttpStatus.OK).body("Management over" + courier.get().getUsername() +"has been taken successfully!");
+                }
+                else{
+                    return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("This courier has already a manager or can't be taken!.");
+                }
+
             } else
                 return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Courier not found.");
 
@@ -168,9 +174,14 @@ public class CourierService {
             Optional<Courier> manager = courierRepository.findByUsername(managerName);
             Optional<Courier> courier = courierRepository.findByUsername(username);
             if(courier.isPresent() && manager.isPresent()) {
-                courier.get().setManager(null);
-                courierRepository.save(courier.get());
-                return ResponseEntity.status(HttpStatus.OK).body("Management over" + courier.get().getUsername() +"has been revoked!");
+                if(courier.get().getManager().equals(manager.get())) {
+                    courier.get().setManager(null);
+                    courierRepository.save(courier.get());
+                    return ResponseEntity.status(HttpStatus.OK).body("Management over" + courier.get().getUsername() +"has been revoked!");
+                }
+                else
+                    return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("You can't revoke someone you are not managing.");
+
             }
             else {
                 return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Courier not found.");
