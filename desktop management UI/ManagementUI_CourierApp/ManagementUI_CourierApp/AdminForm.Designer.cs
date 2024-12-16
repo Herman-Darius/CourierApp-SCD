@@ -42,14 +42,14 @@
             this.btnGetCouriers = new System.Windows.Forms.Button();
             this.btnAssignCourier = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelProducts = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.buttonEditProduct = new System.Windows.Forms.Button();
             this.buttonNewProduct = new System.Windows.Forms.Button();
             this.buttonRemoveProduct = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelPackage = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.buttonEditPackage = new System.Windows.Forms.Button();
@@ -58,8 +58,8 @@
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.buttonLogout = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panelProducts.SuspendLayout();
+            this.panelPackage.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelShowCurrentUser
@@ -195,24 +195,24 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(582, 271);
+            this.richTextBox1.Location = new System.Drawing.Point(606, 261);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(238, 82);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             // 
-            // panel1
+            // panelProducts
             // 
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.buttonEditProduct);
-            this.panel1.Controls.Add(this.buttonNewProduct);
-            this.panel1.Controls.Add(this.buttonRemoveProduct);
-            this.panel1.Controls.Add(this.listBox1);
-            this.panel1.Location = new System.Drawing.Point(12, 251);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(412, 220);
-            this.panel1.TabIndex = 11;
+            this.panelProducts.Controls.Add(this.label4);
+            this.panelProducts.Controls.Add(this.comboBox2);
+            this.panelProducts.Controls.Add(this.buttonEditProduct);
+            this.panelProducts.Controls.Add(this.buttonNewProduct);
+            this.panelProducts.Controls.Add(this.buttonRemoveProduct);
+            this.panelProducts.Controls.Add(this.listBox1);
+            this.panelProducts.Location = new System.Drawing.Point(12, 251);
+            this.panelProducts.Name = "panelProducts";
+            this.panelProducts.Size = new System.Drawing.Size(412, 220);
+            this.panelProducts.TabIndex = 11;
             // 
             // label4
             // 
@@ -266,18 +266,18 @@
             this.listBox1.Size = new System.Drawing.Size(217, 173);
             this.listBox1.TabIndex = 6;
             // 
-            // panel3
+            // panelPackage
             // 
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.comboBox3);
-            this.panel3.Controls.Add(this.buttonEditPackage);
-            this.panel3.Controls.Add(this.buttonNewPackage);
-            this.panel3.Controls.Add(this.buttonRemovePackage);
-            this.panel3.Controls.Add(this.listBox2);
-            this.panel3.Location = new System.Drawing.Point(432, 25);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(412, 220);
-            this.panel3.TabIndex = 12;
+            this.panelPackage.Controls.Add(this.label5);
+            this.panelPackage.Controls.Add(this.comboBox3);
+            this.panelPackage.Controls.Add(this.buttonEditPackage);
+            this.panelPackage.Controls.Add(this.buttonNewPackage);
+            this.panelPackage.Controls.Add(this.buttonRemovePackage);
+            this.panelPackage.Controls.Add(this.listBox2);
+            this.panelPackage.Location = new System.Drawing.Point(432, 25);
+            this.panelPackage.Name = "panelPackage";
+            this.panelPackage.Size = new System.Drawing.Size(412, 220);
+            this.panelPackage.TabIndex = 12;
             // 
             // label5
             // 
@@ -333,7 +333,7 @@
             // 
             // buttonLogout
             // 
-            this.buttonLogout.Location = new System.Drawing.Point(766, 4);
+            this.buttonLogout.Location = new System.Drawing.Point(349, 3);
             this.buttonLogout.Name = "buttonLogout";
             this.buttonLogout.Size = new System.Drawing.Size(75, 23);
             this.buttonLogout.TabIndex = 13;
@@ -345,11 +345,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 478);
+            this.ClientSize = new System.Drawing.Size(429, 478);
             this.ControlBox = false;
             this.Controls.Add(this.buttonLogout);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelPackage);
+            this.Controls.Add(this.panelProducts);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.labelShowCurrentUser);
             this.Controls.Add(this.richTextBox1);
@@ -361,10 +361,10 @@
             this.Load += new System.EventHandler(this.AdminForm_Load_1);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panelProducts.ResumeLayout(false);
+            this.panelProducts.PerformLayout();
+            this.panelPackage.ResumeLayout(false);
+            this.panelPackage.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,14 +382,14 @@
         private System.Windows.Forms.Button buttonDemoteManager;
         private System.Windows.Forms.Button buttonDeleteCourier;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelProducts;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button buttonEditProduct;
         private System.Windows.Forms.Button buttonNewProduct;
         private System.Windows.Forms.Button buttonRemoveProduct;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelPackage;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Button buttonEditPackage;

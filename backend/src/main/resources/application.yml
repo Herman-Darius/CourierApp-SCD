@@ -13,3 +13,14 @@ spring:
         format_sql: true
     database: mysql
     database-platform: org.hibernate.dialect.MySQL8Dialect
+  mail:
+    host: smtp.mailtrap.io
+    port: 587
+    username: b7140bfc43598c
+    password: 0e320465b42fcc
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true

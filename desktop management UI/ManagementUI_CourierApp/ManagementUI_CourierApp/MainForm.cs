@@ -95,13 +95,13 @@ namespace ManagementUI_CourierApp
 
                     if (responseMessage.IsSuccessStatusCode)
                     {
-                        MessageBox.Show($"Delivery accepted successfully! : {responseMessage}");
+                        MessageBox.Show($"Delivery accepted successfully!");
 
                         await PopulateComboBoxes();
                     }
                     else
                     {
-                        MessageBox.Show($"Failed to accept delivery: {responseMessage.StatusCode} - {responseMessage.ReasonPhrase}");
+                        MessageBox.Show($"Failed to accept delivery: {responseMessage.StatusCode}");
                     }
                 }
             }
@@ -158,7 +158,7 @@ namespace ManagementUI_CourierApp
                     }
                     else
                     {
-                        MessageBox.Show($"Failed to completed delivery: {responseMessage.StatusCode} - {responseMessage.ReasonPhrase}");
+                        MessageBox.Show($"Failed to completed delivery: {responseMessage.StatusCode}");
                     }
                 }
             }

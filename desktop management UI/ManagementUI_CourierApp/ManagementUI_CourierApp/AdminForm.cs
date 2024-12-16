@@ -97,7 +97,6 @@ namespace ManagementUI_CourierApp
             try
             {
                 string courierUsername = comboBoxCourier.SelectedItem.ToString();
-                //string managerUsername = comboBoxManager.SelectedItem.ToString();
 
                 if (string.IsNullOrEmpty(AuthTokenService.Token))
                 {
@@ -107,7 +106,11 @@ namespace ManagementUI_CourierApp
 
                 string result = await AssignCourierToManager(courierUsername);
                 await PopulateCourierComboBoxes();
-                MessageBox.Show(result);
+                if (!string.IsNullOrEmpty(result))
+                {
+                    MessageBox.Show("Management taken successfully.");
+                }
+                
 
 
             } catch (Exception ex)
@@ -118,34 +121,7 @@ namespace ManagementUI_CourierApp
 
         private async void btnGetCouriers_Click(object sender, EventArgs e)
         {
-            /*try
-            {
-                int adminId = int.Parse(textAdminId.Text);
 
-                if (string.IsNullOrEmpty(AuthTokenService.Token))
-                {
-                    MessageBox.Show("You are not authenticated. Please log in first.");
-                    return;
-                }
-
-                List<CourierDTO> couriers = await GetCouriersManagedByAdmin(adminId);
-
-                listBoxCourierDetails.Items.Clear();
-
-                foreach (CourierDTO courier in couriers)
-                {
-                    listBoxCourierDetails.Items.Add(courier.Username);
-                }
-
-                if (listBoxCourierDetails.Items.Count > 0)
-                {
-                    listBoxCourierDetails.SelectedIndex = 0;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}");
-            }*/
         }
 
         private void AdminForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -168,7 +144,11 @@ namespace ManagementUI_CourierApp
 
                 string result = await RevokeManagement(courierUsername);
                 await PopulateCourierComboBoxes();
-                MessageBox.Show(result);
+                if (!string.IsNullOrEmpty(result))
+                {
+                    MessageBox.Show("Management successfully removed.");
+                }
+                
             }
             catch (Exception ex)
             {

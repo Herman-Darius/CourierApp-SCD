@@ -29,6 +29,9 @@ public class DeliveryPackageService {
     @Autowired
     private CourierRepository courierRepository;
 
+    @Autowired
+    private EmailService emailService;
+
     @Transactional
     public DeliveryPackage placeOrder(Set<Product> products, String deliveryAddress, String email, String phoneNumber) {
 
@@ -92,6 +95,12 @@ public class DeliveryPackageService {
             myPackage.setAwbNumber(awbNumber);
             System.out.println(awbNumber);
             packageRepository.save(myPackage);
+
+
+            String subject = "Package Order Confirmation";
+            String messageText = "Your package has been successfully created. Your AWB number is: " + awbNumber;
+            emailService.sendEmail(deliveryPackageDTO.getEmail(), subject, messageText);
+
             //return ResponseEntity.status(HttpStatus.CREATED).body("Package created successfully");
             return awbNumber;
         } catch (Exception e){

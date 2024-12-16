@@ -56,7 +56,7 @@
             // 
             // buttonComplete
             // 
-            this.buttonComplete.Location = new System.Drawing.Point(89, 152);
+            this.buttonComplete.Location = new System.Drawing.Point(89, 217);
             this.buttonComplete.Name = "buttonComplete";
             this.buttonComplete.Size = new System.Drawing.Size(75, 23);
             this.buttonComplete.TabIndex = 3;
@@ -83,7 +83,7 @@
             // 
             // buttonAccept
             // 
-            this.buttonAccept.Location = new System.Drawing.Point(8, 152);
+            this.buttonAccept.Location = new System.Drawing.Point(8, 217);
             this.buttonAccept.Name = "buttonAccept";
             this.buttonAccept.Size = new System.Drawing.Size(75, 23);
             this.buttonAccept.TabIndex = 7;
@@ -94,7 +94,7 @@
             // buttonRefresh
             // 
             this.buttonRefresh.Image = ((System.Drawing.Image)(resources.GetObject("buttonRefresh.Image")));
-            this.buttonRefresh.Location = new System.Drawing.Point(170, 143);
+            this.buttonRefresh.Location = new System.Drawing.Point(225, 208);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(34, 32);
             this.buttonRefresh.TabIndex = 9;
@@ -103,7 +103,7 @@
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(332, 4);
+            this.buttonExit.Location = new System.Drawing.Point(522, 4);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(75, 23);
             this.buttonExit.TabIndex = 10;
@@ -116,7 +116,7 @@
             this.comboBoxNewDeliveries.FormattingEnabled = true;
             this.comboBoxNewDeliveries.Location = new System.Drawing.Point(89, 15);
             this.comboBoxNewDeliveries.Name = "comboBoxNewDeliveries";
-            this.comboBoxNewDeliveries.Size = new System.Drawing.Size(110, 21);
+            this.comboBoxNewDeliveries.Size = new System.Drawing.Size(170, 21);
             this.comboBoxNewDeliveries.TabIndex = 14;
             this.comboBoxNewDeliveries.SelectedIndexChanged += new System.EventHandler(this.comboBoxNewDeliveries_SelectedIndexChanged);
             // 
@@ -132,7 +132,7 @@
             this.panel1.Controls.Add(this.buttonRefresh);
             this.panel1.Location = new System.Drawing.Point(13, 33);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(394, 192);
+            this.panel1.Size = new System.Drawing.Size(587, 285);
             this.panel1.TabIndex = 15;
             // 
             // comboBoxMyDeliveries
@@ -140,16 +140,16 @@
             this.comboBoxMyDeliveries.FormattingEnabled = true;
             this.comboBoxMyDeliveries.Location = new System.Drawing.Point(89, 46);
             this.comboBoxMyDeliveries.Name = "comboBoxMyDeliveries";
-            this.comboBoxMyDeliveries.Size = new System.Drawing.Size(110, 21);
+            this.comboBoxMyDeliveries.Size = new System.Drawing.Size(170, 21);
             this.comboBoxMyDeliveries.TabIndex = 17;
             this.comboBoxMyDeliveries.SelectedIndexChanged += new System.EventHandler(this.comboBoxMyDeliveries_SelectedIndexChanged);
             // 
             // listBoxCouriers
             // 
             this.listBoxCouriers.FormattingEnabled = true;
-            this.listBoxCouriers.Location = new System.Drawing.Point(210, 15);
+            this.listBoxCouriers.Location = new System.Drawing.Point(295, 15);
             this.listBoxCouriers.Name = "listBoxCouriers";
-            this.listBoxCouriers.Size = new System.Drawing.Size(179, 160);
+            this.listBoxCouriers.Size = new System.Drawing.Size(289, 225);
             this.listBoxCouriers.TabIndex = 16;
             // 
             // label5
@@ -165,7 +165,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(417, 241);
+            this.ClientSize = new System.Drawing.Size(612, 330);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonExit);

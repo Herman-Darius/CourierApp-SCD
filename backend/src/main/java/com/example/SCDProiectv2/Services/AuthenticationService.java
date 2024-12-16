@@ -4,6 +4,7 @@ import com.example.SCDProiectv2.Models.AuthenticationResponse;
 import com.example.SCDProiectv2.Models.Role;
 import com.example.SCDProiectv2.Models.Courier;
 import com.example.SCDProiectv2.Repositories.CourierRepository;
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -19,7 +20,9 @@ public class AuthenticationService {
     private final PasswordEncoder passwordEncoder;
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
+    private final EmailService emailService;
 
+    @Transactional
     public AuthenticationResponse register(Courier request){
         Courier user = new Courier();
         if (courierRepository.existsByUsername(request.getUsername())){
@@ -32,6 +35,9 @@ public class AuthenticationService {
         user.setEmail(request.getEmail());
         user.setRole(Role.USER);
         user = courierRepository.save(user);
+        String subject = "Welcome to our Service";
+        String messageText = "Hello " + request.getUsername() + ",\n\nWelcome to our service! Your registration was successful.";
+        emailService.sendEmail(request.getEmail(), subject, messageText);
 
         String token = jwtService.generateToken(user);
 
