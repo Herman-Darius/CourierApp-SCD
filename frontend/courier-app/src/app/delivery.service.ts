@@ -24,13 +24,11 @@ export class DeliveryService {
   getOrderDetails(awbNumber: string): Observable<any> {
     return this.http.get<any>(`http://localhost:8080/package/get-order-details/${awbNumber}`);
   }
-  // Update Address (Edit Delivery)
   updateAddress(awbNumber: string, newAddress: string): Observable<any> {
     const editPackageDTO = new PackageEditDTO(awbNumber, newAddress);
     return this.http.post<any>(`${this.apiUrl}/edit/${awbNumber}`, editPackageDTO);
   }
 
-  // Delete Package
   deletePackage(awbNumber: string): Observable<any> {
     return this.http.delete<any>(`${this.apiUrl}/delete/${awbNumber}`);
   }

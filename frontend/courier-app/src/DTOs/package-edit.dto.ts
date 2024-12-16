@@ -1,4 +1,4 @@
-// Define the DTO for editing the package
+
 export class PackageEditDTO {
     awbNumber: string;
     deliveryAddress: string;

@@ -35,10 +35,11 @@ public class AuthenticationService {
         user.setEmail(request.getEmail());
         user.setRole(Role.USER);
         user = courierRepository.save(user);
+        /*
         String subject = "Welcome to our Service";
         String messageText = "Hello " + request.getUsername() + ",\n\nWelcome to our service! Your registration was successful.";
         emailService.sendEmail(request.getEmail(), subject, messageText);
-
+        */
         String token = jwtService.generateToken(user);
 
         return new AuthenticationResponse(token);

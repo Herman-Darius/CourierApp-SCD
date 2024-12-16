@@ -82,7 +82,6 @@
             this.panel2.Controls.Add(this.buttonDemoteManager);
             this.panel2.Controls.Add(this.buttonDeleteCourier);
             this.panel2.Controls.Add(this.listBoxCourierDetails);
-            this.panel2.Controls.Add(this.btnGetCouriers);
             this.panel2.Controls.Add(this.btnAssignCourier);
             this.panel2.Location = new System.Drawing.Point(12, 25);
             this.panel2.Name = "panel2";
@@ -157,7 +156,7 @@
             // 
             // buttonDeleteCourier
             // 
-            this.buttonDeleteCourier.Location = new System.Drawing.Point(14, 177);
+            this.buttonDeleteCourier.Location = new System.Drawing.Point(14, 148);
             this.buttonDeleteCourier.Name = "buttonDeleteCourier";
             this.buttonDeleteCourier.Size = new System.Drawing.Size(128, 23);
             this.buttonDeleteCourier.TabIndex = 7;
@@ -175,7 +174,7 @@
             // 
             // btnGetCouriers
             // 
-            this.btnGetCouriers.Location = new System.Drawing.Point(14, 148);
+            this.btnGetCouriers.Location = new System.Drawing.Point(14, 130);
             this.btnGetCouriers.Name = "btnGetCouriers";
             this.btnGetCouriers.Size = new System.Drawing.Size(128, 23);
             this.btnGetCouriers.TabIndex = 4;
@@ -274,6 +273,7 @@
             this.panelPackage.Controls.Add(this.buttonNewPackage);
             this.panelPackage.Controls.Add(this.buttonRemovePackage);
             this.panelPackage.Controls.Add(this.listBox2);
+            this.panelPackage.Controls.Add(this.btnGetCouriers);
             this.panelPackage.Location = new System.Drawing.Point(432, 25);
             this.panelPackage.Name = "panelPackage";
             this.panelPackage.Size = new System.Drawing.Size(412, 220);
@@ -345,7 +345,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(429, 478);
+            this.ClientSize = new System.Drawing.Size(426, 249);
             this.ControlBox = false;
             this.Controls.Add(this.buttonLogout);
             this.Controls.Add(this.panelPackage);

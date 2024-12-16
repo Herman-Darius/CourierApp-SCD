@@ -97,10 +97,10 @@ public class DeliveryPackageService {
             packageRepository.save(myPackage);
 
 
-            String subject = "Package Order Confirmation";
+            /*String subject = "Package Order Confirmation";
             String messageText = "Your package has been successfully created. Your AWB number is: " + awbNumber;
             emailService.sendEmail(deliveryPackageDTO.getEmail(), subject, messageText);
-
+            */
             //return ResponseEntity.status(HttpStatus.CREATED).body("Package created successfully");
             return awbNumber;
         } catch (Exception e){
