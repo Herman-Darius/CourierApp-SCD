@@ -19,7 +19,7 @@ public interface CourierRepository extends JpaRepository<Courier, Integer> {
     @Query("SELECT c FROM Courier c LEFT JOIN FETCH c.manager WHERE c.id = :id")
     Optional<Courier> findByIdWithManager(@Param("id") Integer id);
     @Query("SELECT c FROM Courier c LEFT JOIN FETCH c.manager")
-    List<Courier> findAllWithManagers();
+    Optional<List<Courier>> findAllWithManagers();
 
     boolean existsByUsername(String username);
 

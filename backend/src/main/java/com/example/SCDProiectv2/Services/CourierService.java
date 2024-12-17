@@ -76,6 +76,22 @@ public class CourierService {
         }
 
     }
+    public ResponseEntity<?> getAllCouriersWithManagers(){
+        Optional<List<Courier>> couriers = courierRepository.findAllWithManagers();
+        if(couriers.isPresent()) {
+            return ResponseEntity.status(HttpStatus.OK).body(couriers.get());
+        }
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Courier not found.");
+    }
+
+    public ResponseEntity<?> findCourierByIdAndHasManager(Integer courierId){
+        Optional<Courier> courier = courierRepository.findByIdWithManager(courierId);
+        if(courier.isPresent()) {
+            return ResponseEntity.status(HttpStatus.OK).body(courier.get());
+        }
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Courier not found.");
+    }
+
     public ResponseEntity<?> updateCourier(CourierDTO courierDTO) {
         try{
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -191,5 +207,7 @@ public class CourierService {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
         }
     }
+
+
 
 }

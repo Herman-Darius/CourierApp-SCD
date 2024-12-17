@@ -30,7 +30,15 @@ public class CourierController {
     ){
         return List.of();
     }
+    @GetMapping("/courier/get-all-with-manager")
+    public ResponseEntity<?> getAllCouriersWithManager() {
+        return ResponseEntity.ok().body(courierService.getAllCouriersWithManagers());
+    }
 
+    @GetMapping("/courier/get-courier-with-manager/{id}")
+    public ResponseEntity<?> getCourierWithManager(@PathVariable Integer id) {
+        return ResponseEntity.ok().body(courierService.findCourierByIdAndHasManager(id));
+    }
 
     @PostMapping("/courier/assign")
     public ResponseEntity<?> assignCourierToAdmin(@RequestParam Integer courierId, @RequestParam Integer adminId) {
@@ -81,5 +89,6 @@ public class CourierController {
     public ResponseEntity<?> revokeCourier(@PathVariable String username) {
         return ResponseEntity.ok(courierService.revokeManagementOverCourier(username));
     }
+
 
 }

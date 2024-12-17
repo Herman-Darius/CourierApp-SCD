@@ -25,22 +25,16 @@ public class PackageController {
         this.packageService = packageService;
     }
 
-    //@PreAuthorize("hasRole('ADMIN')")
-    /*@PostMapping("create")
-    public ResponseEntity<?> createDelivery(@RequestBody PackageCreateRequestDTO packageDTO) {
-        System.out.println(packageDTO.toString());
-        return ResponseEntity.ok(packageService.createDeliveryPackage(packageDTO));
-    }*/
+
     @PostMapping("create")
     public ResponseEntity<?> createDelivery(@RequestBody PackageCreateRequestDTO packageDTO) {
         System.out.println(packageDTO.toString());
 
         String awbNumber = packageService.createDeliveryPackage(packageDTO);
 
-        // Return a response with both the success message and the AWB number
         Map<String, Object> response = new HashMap<>();
         response.put("message", "Package created successfully");
-        response.put("awbNumber", awbNumber);  // Return AWB number in the response
+        response.put("awbNumber", awbNumber);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
