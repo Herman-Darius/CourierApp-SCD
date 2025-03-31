@@ -1,4 +1,4 @@
-# CourierApp-SCD
+# Courier Application
 This project is a courier application developed in Java Spring Boot, C# and Angular. The user can place an order from web and track it's order by inserting his delivery AWB. Administration and delivery handling are in a windows application where you can login as a normal courier or as an manager, each with his own tasks.
 
 <div align="center">
